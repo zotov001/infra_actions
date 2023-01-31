@@ -45,7 +45,7 @@ jobs:
     needs: tests
     steps:
       - name: Check out the repo
-        # Проверка доступности репозитория Docker Hub для workflow
+        # Проверка доступности репозитория Docker Hub для workflo
         uses: actions/checkout@v2 
       - name: Set up Docker Buildx
         # Вызов сборщика контейнеров docker
@@ -90,4 +90,6 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{ github.workflow }} успешно выполнен! 
+        message: ${{ github.workflow }} успешно выполнен!
+
+        
